@@ -28,6 +28,14 @@ npm install
 
 That's it. Now you are all set to start blockchaining!!!
 
+**Start testrpc**
+
+Below command would start testrpc on localhost:8545 with 20 accounts.
+
+```
+testrpc -a 20
+```
+
 **To compile the contract**
 
 truffle compile
