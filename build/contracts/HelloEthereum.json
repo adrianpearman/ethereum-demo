@@ -1,0 +1,315 @@
+{
+  "contract_name": "HelloEthereum",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "people",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "gender",
+          "type": "uint8"
+        },
+        {
+          "name": "age",
+          "type": "uint256"
+        },
+        {
+          "name": "registered",
+          "type": "bool"
+        },
+        {
+          "name": "lastTimeSaidHi",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "sayHi",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newMainDev",
+          "type": "address"
+        }
+      ],
+      "name": "changeMainDev",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mainDev",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "name": "_id",
+          "type": "bytes32"
+        },
+        {
+          "name": "_gender",
+          "type": "uint256"
+        },
+        {
+          "name": "_age",
+          "type": "uint256"
+        }
+      ],
+      "name": "register",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "isPersonRegistered",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCreationTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "contractAddr",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "oldMainDev",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newMainDev",
+          "type": "address"
+        }
+      ],
+      "name": "MainDevChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "contractAddr",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "mainDev",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "PersonRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "contractAddr",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "HiEthereum",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60008054600160a060020a03191633600160a060020a0316179055426002555b5b610824806100406000396000f300606060405236156100805763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166307de973581146100855780630c49c36c146101765780632dd1e4ff1461019d57806387747f8e146101d0578063c291f118146101ff578063cfd6c6061461027f578063e6519a35146102b2575b600080fd5b341561009057600080fd5b6100a4600160a060020a03600435166102d7565b604051878152600160a060020a038616604082015260208101606082018660028111156100cd57fe5b60ff1681526020810186905284151560408201526060810184905260808382038101835289546002600182161561010002600019019091160490820181905260a090910190899080156101615780601f1061013657610100808354040283529160200191610161565b820191906000526020600020905b81548152906001019060200180831161014457829003601f168201915b50509850505050505050505060405180910390f35b341561018157600080fd5b610189610335565b604051901515815260200160405180910390f35b34156101a857600080fd5b610189600160a060020a0360043516610481565b604051901515815260200160405180910390f35b34156101db57600080fd5b6101e361050d565b604051600160a060020a03909116815260200160405180910390f35b341561020a57600080fd5b61018960046024813581810190830135806020601f8201819004810201604051908101604052818152929190602084018383808284375094965050508335600160a060020a031693602081013593506040810135925060600135905061051c565b604051901515815260200160405180910390f35b341561028a57600080fd5b610189600160a060020a036004351661070a565b604051901515815260200160405180910390f35b34156102bd57600080fd5b6102c561072f565b60405190815260200160405180910390f35b60016020819052600091825260409091208054600282015460038301546004840154600585015493959490940193600160a060020a038316937401000000000000000000000000000000000000000090930460ff9081169391169087565b600160a060020a03331660009081526001602052604081206004015460ff16151561035f57600080fd5b33600160a060020a031660009081526001602052604090206005015442600a909101111561038c57600080fd5b610394610736565b33600160a060020a031630600160a060020a03167f9b747a47888a0ed389e2f8c5ae038e27aea9a530c23301d94354244277590ab96001600033600160a060020a0316600160a060020a031681526020019081526020016000206001016040516020808252825460026000196101006001841615020190911604908201819052819060408201908490801561046a5780601f1061043f5761010080835404028352916020019161046a565b820191906000526020600020905b81548152906001019060200180831161044d57829003601f168201915b50509250505060405180910390a35060015b5b5b90565b60008054819033600160a060020a0390811691161461049f57600080fd5b5060008054600160a060020a0384811673ffffffffffffffffffffffffffffffffffffffff19831681179093559081169190829030167f1e5e6def3056133d5882f6e569749afbda721ddc8ec371f7f705dfe301c31c5a60405160405180910390a4600191505b5b50919050565b600054600160a060020a031681565b6000805433600160a060020a0390811691161461053857600080fd5b828060025b101561054857600080fd5b600160a060020a038616600090815260016020819052604090912086815501878051610578929160200190610758565b50600160a060020a03861660008181526001602052604090206002908101805473ffffffffffffffffffffffffffffffffffffffff191690921790915584908111156105c057fe5b600160a060020a038716600090815260016020526040902060029081018054909174ff000000000000000000000000000000000000000019909116907401000000000000000000000000000000000000000090849081111561061e57fe5b0217905550600160a060020a03808716600081815260016020819052604080832060038101899055600401805460ff191690921790915590549192918216913016907f24086862f60ea8f7fe72e7d27f98c8a6447237cfe63128582b7b572c203ea01a908b905160208082528190810183818151815260200191508051906020019080838360005b838110156106bf5780820151818401525b6020016106a6565b50505050905090810190601f1680156106ec5780820380516001836020036101000a031916815260200191505b509250505060405180910390a4600191505b5b505b95945050505050565b600160a060020a03811660009081526001602052604090206004015460ff165b919050565b6002545b90565b600160a060020a0333166000908152600160205260409020426005909101555b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061079957805160ff19168380011785556107c6565b828001600101855582156107c6579182015b828111156107c65782518255916020019190600101906107ab565b5b506107d39291506107d7565b5090565b61047c91905b808211156107d357600081556001016107dd565b5090565b905600a165627a7a723058204044576f51d81e4b507b19d7b2e22e34fb34791d533ea01207e2a39ff2fa68f40029",
+  "networks": {
+    "1509373149627": {
+      "events": {
+        "0x1e5e6def3056133d5882f6e569749afbda721ddc8ec371f7f705dfe301c31c5a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "contractAddr",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "oldMainDev",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newMainDev",
+              "type": "address"
+            }
+          ],
+          "name": "MainDevChanged",
+          "type": "event"
+        },
+        "0x24086862f60ea8f7fe72e7d27f98c8a6447237cfe63128582b7b572c203ea01a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "contractAddr",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "mainDev",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "name": "PersonRegistered",
+          "type": "event"
+        },
+        "0x9b747a47888a0ed389e2f8c5ae038e27aea9a530c23301d94354244277590ab9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "contractAddr",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "name": "HiEthereum",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xabfb01a7dd39cfeaa733061e5823d0beee7ed287",
+      "updated_at": 1509376136234
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1509376136234
+}
