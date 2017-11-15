@@ -12,6 +12,12 @@ To start with, you will need to install some tools:
     * Ethereum package for Sublime Text
     * atom-solidity-linter for Atom
     * solidity for VS Code
+    
+### For windows 
+
+npm install -g --production windows-build-tools 
+
+**Note: cygwin terminal is recommended command line tool for windows. Truffle has issues when used through command prompt.**
 
 
 **Now to install testrpc & web3, run the below command:**
